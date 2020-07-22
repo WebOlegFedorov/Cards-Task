@@ -1,6 +1,5 @@
 .instructions-wrapper {
   flex: 0 0 300px;
-  overflow: auto;
   box-shadow: -5px 0px 5px -1px #eee;
   height: 100vh;
 
@@ -9,7 +8,7 @@
   }
 
   ul {
-    overflow: scroll;
+    overflow: auto;
     height: 100%;
   }
 }

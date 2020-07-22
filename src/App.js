@@ -8,6 +8,7 @@ import { uuid } from 'uuidv4';
 const App = () => {
   const [cards, setCards] = useState([]);
   const [messages, setMessages] = useState([]);
+  const [increaseSort, setIncreaseSort] = useState(true);
 
   const addCard = () => {
     const id = uuid();
@@ -40,19 +41,37 @@ const App = () => {
   };
 
   const sortCards = () => {
-    const sorted = [
-      ...cards.sort(function (a, b) {
-        if (a.number > b.number) {
-          return 1;
-        }
-        if (a.number < b.number) {
-          return -1;
-        }
-        return 0;
-      }),
-    ];
+    if (increaseSort) {
+      const sorted = [
+        ...cards.sort(function (a, b) {
+          if (a.number > b.number) {
+            return 1;
+          }
+          if (a.number < b.number) {
+            return -1;
+          }
+          return 0;
+        }),
+      ];
 
-    setCards(sorted);
+      setCards(sorted);
+      setIncreaseSort(false);
+    } else {
+      const sorted = [
+        ...cards.sort(function (a, b) {
+          if (a.number < b.number) {
+            return 1;
+          }
+          if (a.number > b.number) {
+            return -1;
+          }
+          return 0;
+        }),
+      ];
+
+      setCards(sorted);
+      setIncreaseSort(true);
+    }
   };
   return (
     <div className="wrapper">
