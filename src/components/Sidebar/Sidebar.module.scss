@@ -1,0 +1,30 @@
+.instructions-wrapper {
+  flex: 0 0 300px;
+  overflow: auto;
+  box-shadow: -5px 0px 5px -1px #eee;
+  height: 100vh;
+
+  @media screen and (max-width: 1030px) {
+    display: none;
+  }
+
+  ul {
+    overflow: scroll;
+    height: 100%;
+  }
+}
+
+.message {
+  list-style: none;
+  height: 30px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.placeholder {
+  text-align: center;
+}

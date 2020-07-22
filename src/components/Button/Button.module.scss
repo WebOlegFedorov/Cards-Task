@@ -1,0 +1,16 @@
+.wrapper {
+  cursor: pointer;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 4px;
+  transition: 0.15s;
+  margin: 0 5px 0 5px;
+
+  &:active {
+    box-shadow: 0 0 1px;
+  }
+}

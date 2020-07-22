@@ -1,0 +1,28 @@
+.wrapper {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 15px 40px 15px;
+  box-shadow: 0 0 10px #eee;
+  position: relative;
+  transition: 0.15s;
+
+  &:hover {
+    box-shadow: 0 0 15px rgb(206, 204, 204);
+  }
+
+  .delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
